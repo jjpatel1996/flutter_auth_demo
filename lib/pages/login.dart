@@ -4,6 +4,8 @@ import 'package:flutter_signin_button/flutter_signin_button.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 
+import 'home.dart';
+
 final FirebaseAuth _fauth = FirebaseAuth.instance;
 
 class LoginPage extends StatefulWidget {
@@ -44,6 +46,7 @@ class _LoginPageState extends State<LoginPage> {
                           padding: EdgeInsets.all(10.0),
                           child: TextFormField(
                             controller: _emailCntrl,
+                            style: TextStyle(fontSize: 15, color: Colors.grey),
                             decoration: InputDecoration(
                               errorStyle: TextStyle(height: 0),
                               labelText: "Email",
@@ -65,6 +68,7 @@ class _LoginPageState extends State<LoginPage> {
                           padding: EdgeInsets.all(10),
                           child: TextFormField(
                             controller: _passwordCntrl,
+                            style: TextStyle(fontSize: 15, color: Colors.grey),
                             decoration: InputDecoration(
                               errorStyle: TextStyle(height: 0),
                               labelText: "Password",
@@ -220,6 +224,9 @@ class _LoginPageState extends State<LoginPage> {
           textAlign: TextAlign.center,
         ),
       ));
+
+      Navigator.pushReplacementNamed(context, "/home");
+
     } catch (e) {
       Scaffold.of(context).showSnackBar(SnackBar(
         content: Text(
@@ -288,8 +295,7 @@ class _LoginPageState extends State<LoginPage> {
         ),
       ));
 
-      // Navigator.pushReplacementNamed(context, "/home");
-      //  Navigator.of(context).push(MaterialPageRoute(builder: (context) => HomeScreen()));
+       Navigator.pushReplacementNamed(context, "/home");
 
     } else {
       _registerSuccess = false;

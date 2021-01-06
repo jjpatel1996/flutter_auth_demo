@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
+import 'pages/home.dart';
 import 'pages/login.dart';
 
 Future<void> main() async {
@@ -18,6 +19,7 @@ class FireloginApp extends StatelessWidget {
         darkTheme: ThemeData.dark(),
         routes: {
           '/login': (_) => LoginPage(),
+          '/home': (_) => HomeScreen()
         },
         home: LoginPage());
   }
