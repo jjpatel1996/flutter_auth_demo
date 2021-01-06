@@ -4,8 +4,6 @@ import 'package:flutter_signin_button/flutter_signin_button.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 
-import 'home.dart';
-
 final FirebaseAuth _fauth = FirebaseAuth.instance;
 
 class LoginPage extends StatefulWidget {
@@ -23,9 +21,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        decoration: BoxDecoration(
-            color: Colors.white
-        ),
+        decoration: BoxDecoration(color: Colors.white),
         child: Scaffold(
           backgroundColor: Colors.transparent,
           body: Builder(builder: (BuildContext context) {
@@ -153,6 +149,9 @@ class _LoginPageState extends State<LoginPage> {
                                     onPressed: () async {
                                       if (_formKey.currentState.validate()) {
                                         _register();
+
+                                        Navigator.pushReplacementNamed(
+                                            context, "/home");
                                       }
                                       Scaffold.of(context)
                                           .showSnackBar(SnackBar(
@@ -289,11 +288,11 @@ class _LoginPageState extends State<LoginPage> {
         ),
       ));
 
-//      Navigator.of(context).push(MaterialPageRoute(builder: (context) => HomeScreen()));
+      // Navigator.pushReplacementNamed(context, "/home");
+      //  Navigator.of(context).push(MaterialPageRoute(builder: (context) => HomeScreen()));
 
     } else {
       _registerSuccess = false;
     }
   }
-
 }
