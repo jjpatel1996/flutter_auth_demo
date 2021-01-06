@@ -264,6 +264,9 @@ class _LoginPageState extends State<LoginPage> {
           textAlign: TextAlign.center,
         ),
       ));
+
+      Navigator.pushReplacementNamed(context, "/home");
+
     } catch (e) {
       print(e);
 
