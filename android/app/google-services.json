@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "86528399156",
+    "project_id": "flutter-auth-integration",
+    "storage_bucket": "flutter-auth-integration.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:86528399156:android:f9aad042d7d9e031503761",
+        "android_client_info": {
+          "package_name": "com.goldinguy.firelogin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "86528399156-27632k5fqfdmv1ck51t14nf1805ckrfv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3wQxpSU9Wluvc2Qr9pxahFGAzNARRQOA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "86528399156-27632k5fqfdmv1ck51t14nf1805ckrfv.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "86528399156-0bidkolreemh8shm9br6ea038cob7i7l.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.souvikbiswas.signInFlutter"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
